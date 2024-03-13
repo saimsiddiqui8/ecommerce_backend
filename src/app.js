@@ -32,6 +32,10 @@ import userRouter from './routes/user.routes.js'
 import productRouter from "./routes/product.routes.js"
 import cartRouter from "./routes/cart.routes.js"
 
+app.get("/", (req, res) => {
+    res.send("Hello world!");
+});
+
 app.route("/api/v1/register").post(registerUser);
 app.route("/api/v1/login").post(loginUser);
 app.route("/api/v1/logout").post(logoutUser);
